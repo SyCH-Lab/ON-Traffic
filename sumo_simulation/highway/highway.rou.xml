@@ -1,0 +1,16 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <route edges="gneE1 gneE2" id="route_0"/>
+    <route edges="gneE3 gneE2" id="route_1"/>
+    
+    <!-- Corrected vType to use IDM parameters -->
+    <vType id="SUMO_DEFAULT_TYPE" carFollowModel="IDM" accel="2.6" decel="4.5" sigma="0" length="3" minGap="2.0" maxSpeed="10.33" color="yellow" tau="1.0"/>
+    <vType id="PV"                carFollowModel="IDM" accel="2.6" decel="4.5" sigma="0" length="3" minGap="2.0" maxSpeed="10.33" color="red" tau="1.0"/>
+
+    <flow id="initPV" type="PV" route="route_0" begin="0" end="0" departSpeed="speedLimit" number="3" departPos="random_free"/>
+    <flow id="init" type="SUMO_DEFAULT_TYPE" route="route_0" begin="0" end="0" departSpeed="speedLimit" number="50" departPos="random_free"/>
+    
+    <flow id="PVflow" type="PV" route="route_0" begin="1" probability="0.015" end="10000" departSpeed="10"/>
+    <flow id="def1" type="SUMO_DEFAULT_TYPE" route="route_0" begin="1" end="10000" probability="0.3" departSpeed="10" />
+    
+</routes>
