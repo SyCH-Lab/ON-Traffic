@@ -1,4 +1,5 @@
 # ON-Traffic: An Operator Learning Framework for Online Traffic Flow Estimation and Uncertainty Quantification from Lagrangian Sensors
+This repository contains the source code for the paper [ON-Traffic: An Operator Learning Framework for Online Traffic Flow Estimation and Uncertainty Quantification from Lagrangian Sensors](https://arxiv.org/abs/2503.14053)
 
 # Requirements
 `environment_dataset.yml` contains the Anaconda environment file that can be used to create the dataset. The environment can be made using `conda env create -f environment_dataset.yml`
